@@ -1,0 +1,119 @@
+/* App.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'SuisseWorks', Helvetica, Arial, sans-serif;
+}
+
+body { color: #2d2f31; }
+
+.section-padding { padding: 40px 24px; max-width: 1340px; margin: 0 auto; }
+.bg-light { background-color: #f7f9fa; max-width: 100%; }
+.sub-text { font-size: 18px; color: #2d2f31; margin-bottom: 20px; max-width: 800px; }
+.btn-ghost { background: transparent; border: none; color: #5624d0; font-weight: bold; cursor: pointer; }
+
+/* Navbar & Hero (Existing styles preserved/tweaked) */
+.navbar { display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 72px; box-shadow: 0 2px 4px rgba(0,0,0,.08); z-index: 100; position: relative; background: white; }
+.nav-left { display: flex; align-items: center; gap: 15px; }
+.logo { font-weight: bold; font-size: 24px; cursor: pointer; }
+.search-container { flex-grow: 1; margin: 0 24px; border: 1px solid #1c1d1f; border-radius: 999px; height: 48px; display: flex; align-items: center; background-color: #f7f9fa; padding: 0 15px; }
+.search-input { border: none; background: transparent; width: 100%; outline: none; margin-left: 10px; font-size: 14px; }
+.nav-right { display: flex; gap: 15px; align-items: center; font-size: 14px; }
+.btn-login, .btn-signup { padding: 0 16px; height: 40px; font-weight: bold; cursor: pointer; border: 1px solid #1c1d1f; }
+.btn-login { background-color: white; }
+.btn-signup { background-color: #1c1d1f; color: white; }
+.btn-globe { background: white; border: 1px solid #1c1d1f; height: 40px; width: 40px; cursor: pointer; }
+
+.hero {
+  height: 400px;
+  background-image: url('https://img-c.udemycdn.com/notices/web_carousel_slide/image/5ab81bd5-af55-4235-9f1e-07cdc7ce0b93.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex; align-items: center;
+}
+.hero-card { background: white; padding: 24px; width: 440px; margin-left: 50px; box-shadow: 0 2px 4px rgba(0,0,0,.08); }
+.hero-card h1 { font-family: 'Times New Roman', serif; font-size: 32px; margin-bottom: 10px; line-height: 1.2; }
+
+/* Skills Cards */
+.skills-cards-container { display: flex; gap: 20px; justify-content: space-between; }
+.skill-category-card { flex: 1; background: white; cursor: pointer; border: 1px solid #d1d7dc; transition: 0.2s; }
+.skill-category-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+.skill-img-wrapper { height: 150px; overflow: hidden; background: #eee; }
+.skill-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+.skill-card-footer { padding: 16px; display: flex; justify-content: space-between; align-items: center; }
+.learner-badge { font-size: 12px; font-weight: bold; color: #6a6f73; display: block; }
+
+/* AI Era Section */
+.ai-era-section { background-color: #2d2f31; color: white; margin: 40px 24px; padding: 40px; display: flex; justify-content: space-between; align-items: center; max-width: 1340px; margin: 40px auto; }
+.ai-content { max-width: 50%; }
+.ai-content h2 { font-family: 'Times New Roman', serif; font-size: 32px; margin-bottom: 16px; }
+.ai-features { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 24px 0; }
+.feature { display: flex; align-items: center; gap: 10px; font-weight: bold; }
+.ai-btn { background: white; color: #2d2f31; padding: 12px 24px; border: none; font-weight: bold; cursor: pointer; }
+
+/* Course Grid & Cards */
+.category-tabs { display: flex; gap: 15px; margin-bottom: 24px; overflow-x: auto; }
+.cat-btn { border: none; background: #f7f9fa; padding: 10px 15px; border-radius: 20px; font-weight: bold; cursor: pointer; white-space: nowrap; }
+.cat-btn.active { background: #2d2f31; color: white; }
+.courses-grid { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 20px; }
+.course-card { min-width: 260px; max-width: 260px; cursor: pointer; }
+.course-img { width: 100%; height: 145px; object-fit: cover; border: 1px solid #d1d7dc; }
+.course-content h3 { font-size: 16px; font-weight: bold; margin: 10px 0 5px; line-height: 1.2; height: 40px; overflow: hidden; }
+.price-row { display: flex; gap: 8px; align-items: center; font-weight: bold; margin-top: 5px; }
+.old-price { text-decoration: line-through; color: #6a6f73; font-size: 14px; }
+.tag { display: inline-block; padding: 4px 8px; font-size: 12px; font-weight: bold; margin-top: 8px; }
+.tag-bestseller { background: #eceb98; color: #3d3c0a; }
+.tag-premium { background: #c0c0ff; color: #1e1e50; }
+.show-all-btn { margin-top: 20px; background: white; border: 1px solid #2d2f31; padding: 10px 20px; font-weight: bold; cursor: pointer; }
+
+/* Testimonials */
+.testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 20px; }
+.testimonial-card { background: white; padding: 24px; border: 1px solid #d1d7dc; display: flex; flex-direction: column; justify-content: space-between; }
+.quote-icon { font-size: 24px; opacity: 0.3; }
+.testimonial-source { display: flex; align-items: center; gap: 12px; margin-top: 16px; border-top: 1px solid #eee; padding-top: 16px; }
+.user-avatar { width: 40px; height: 40px; border-radius: 50%; background: #eee; }
+.source-name { font-weight: bold; font-size: 14px; }
+.source-title { font-size: 12px; color: #6a6f73; }
+
+/* Cert Prep */
+.cert-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px; }
+.cert-grid { display: flex; gap: 20px; }
+.cert-card { display: flex; flex: 1; gap: 15px; align-items: center; background: #f7f9fa; padding: 16px; border: 1px solid #d1d7dc; cursor: pointer; }
+.cert-img-wrapper { width: 60px; height: 60px; }
+.cert-img-wrapper img { width: 100%; height: 100%; object-fit: contain; }
+.cert-content h3 { font-size: 16px; margin-bottom: 4px; }
+.cert-content p { font-size: 12px; color: #6a6f73; margin: 0; }
+
+/* Business Plans */
+.plans-grid { display: flex; gap: 24px; margin-top: 20px; }
+.plan-card { flex: 1; border: 1px solid #d1d7dc; padding: 0; overflow: hidden; }
+.plan-header { padding: 24px; border-bottom: 1px solid #d1d7dc; }
+.plan-header h3 { font-size: 24px; margin-bottom: 5px; }
+.team-plan .plan-header { border-top: 6px solid #a435f0; }
+.enterprise-plan .plan-header { border-top: 6px solid #5624d0; }
+.plan-body { padding: 24px; }
+.plan-body ul { margin: 20px 0; padding-left: 20px; font-size: 14px; line-height: 1.6; }
+.plan-btn { width: 100%; padding: 12px; background: #2d2f31; color: white; border: none; font-weight: bold; cursor: pointer; }
+
+/* Report Banner */
+.report-banner { display: flex; background: #2d2f31; color: white; align-items: center; justify-content: space-between; margin: 40px auto; max-width: 1340px; }
+.report-content { padding: 40px; max-width: 50%; }
+.report-content h2 { font-family: 'Times New Roman', serif; font-size: 32px; margin-bottom: 16px; }
+.report-btn { background: white; padding: 12px 20px; border: none; font-weight: bold; margin-top: 20px; cursor: pointer; }
+.report-banner img { max-height: 300px; }
+
+/* Case Study */
+.case-study-card { display: flex; border: 1px solid #d1d7dc; margin-top: 20px; }
+.case-content { flex: 1; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+.case-logo { max-width: 150px; margin-bottom: 20px; }
+.case-stats { display: flex; gap: 30px; margin: 20px 0; }
+.stat-box strong { font-size: 32px; display: block; }
+.case-image { flex: 1; }
+.case-image img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Footer & Companies */
+.companies-section { text-align: center; padding: 40px 24px; background: #f7f9fa; border-top: 1px solid #d1d7dc; margin-top: 40px; }
+.logos-row { display: flex; justify-content: center; gap: 40px; font-size: 20px; font-weight: bold; color: #6a6f73; flex-wrap: wrap; opacity: 0.7; }
+.footer { background: #2d2f31; color: white; padding: 24px 40px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; }
+.footer-links { display: flex; gap: 20px; }
